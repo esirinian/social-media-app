@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		0DC03A67FD558BE462647B9D /* Pods_SocialMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92C11A0B91DF1667BA3ED6C8 /* Pods_SocialMedia.framework */; };
+		B80196351E2AE00E000CE278 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80196341E2AE00E000CE278 /* CustomView.swift */; };
+		B80196381E2AE097000CE278 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80196371E2AE097000CE278 /* Constants.swift */; };
+		B801963A1E2AE24E000CE278 /* CustomButtonFB.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80196391E2AE24E000CE278 /* CustomButtonFB.swift */; };
+		B801963C1E2AE3C8000CE278 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B801963B1E2AE3C8000CE278 /* CustomTextField.swift */; };
+		B801963E1E2AE595000CE278 /* CustomButtonSI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B801963D1E2AE595000CE278 /* CustomButtonSI.swift */; };
 		B83B48D31E2ACF98000C301D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83B48D21E2ACF98000C301D /* AppDelegate.swift */; };
 		B83B48D51E2ACF98000C301D /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83B48D41E2ACF98000C301D /* SignInVC.swift */; };
 		B83B48D81E2ACF98000C301D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B83B48D61E2ACF98000C301D /* Main.storyboard */; };
@@ -20,6 +25,11 @@
 		0AEFD95E121F340E28480EE4 /* Pods-SocialMedia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialMedia.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SocialMedia/Pods-SocialMedia.debug.xcconfig"; sourceTree = "<group>"; };
 		205B43C134BEC6D1E3FFD32B /* Pods-SocialMedia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialMedia.release.xcconfig"; path = "Pods/Target Support Files/Pods-SocialMedia/Pods-SocialMedia.release.xcconfig"; sourceTree = "<group>"; };
 		92C11A0B91DF1667BA3ED6C8 /* Pods_SocialMedia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialMedia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B80196341E2AE00E000CE278 /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		B80196371E2AE097000CE278 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B80196391E2AE24E000CE278 /* CustomButtonFB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButtonFB.swift; sourceTree = "<group>"; };
+		B801963B1E2AE3C8000CE278 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		B801963D1E2AE595000CE278 /* CustomButtonSI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButtonSI.swift; sourceTree = "<group>"; };
 		B83B48CF1E2ACF98000C301D /* SocialMedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialMedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B83B48D21E2ACF98000C301D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B83B48D41E2ACF98000C301D /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
@@ -50,6 +60,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B80196361E2AE086000CE278 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				B80196371E2AE097000CE278 /* Constants.swift */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
 		B83B48C61E2ACF98000C301D = {
 			isa = PBXGroup;
 			children = (
@@ -71,6 +89,7 @@
 		B83B48D11E2ACF98000C301D /* SocialMedia */ = {
 			isa = PBXGroup;
 			children = (
+				B80196361E2AE086000CE278 /* Util */,
 				B83B48E41E2AD0D5000C301D /* Model */,
 				B83B48E51E2AD0DE000C301D /* View */,
 				B83B48E61E2AD0E2000C301D /* Controller */,
@@ -94,6 +113,10 @@
 		B83B48E51E2AD0DE000C301D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B80196341E2AE00E000CE278 /* CustomView.swift */,
+				B80196391E2AE24E000CE278 /* CustomButtonFB.swift */,
+				B801963B1E2AE3C8000CE278 /* CustomTextField.swift */,
+				B801963D1E2AE595000CE278 /* CustomButtonSI.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -240,8 +263,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B801963E1E2AE595000CE278 /* CustomButtonSI.swift in Sources */,
+				B80196351E2AE00E000CE278 /* CustomView.swift in Sources */,
 				B83B48D51E2ACF98000C301D /* SignInVC.swift in Sources */,
+				B801963C1E2AE3C8000CE278 /* CustomTextField.swift in Sources */,
 				B83B48D31E2ACF98000C301D /* AppDelegate.swift in Sources */,
+				B80196381E2AE097000CE278 /* Constants.swift in Sources */,
+				B801963A1E2AE24E000CE278 /* CustomButtonFB.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
