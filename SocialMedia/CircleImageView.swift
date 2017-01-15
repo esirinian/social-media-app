@@ -1,15 +1,15 @@
 //
-//  CustomView.swift
+//  CircleImageView.swift
 //  SocialMedia
 //
-//  Created by Eric Sirinian on 1/14/17.
+//  Created by Eric Sirinian on 1/15/17.
 //  Copyright © 2017 Eric Sirinian. All rights reserved.
 //
 
 import UIKit
 
-class CustomView: UIView {
-
+class CircleImageView: UIImageView {
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -17,8 +17,15 @@ class CustomView: UIView {
         layer.shadowOpacity = 1.0
         layer.shadowRadius = 5.0
         layer.shadowOffset = CGSize(width: 3.0, height: 3.0)
+    }
+    
+    
+    
+    override func draw(_ rect: CGRect) {
+        super.draw(rect)
         
-        layer.cornerRadius = 2.0
+        layer.cornerRadius = self.frame.width / 2.0
+
     }
 
 }
