@@ -19,6 +19,7 @@
 		B83B48DA1E2ACF98000C301D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B83B48D91E2ACF98000C301D /* Assets.xcassets */; };
 		B83B48DD1E2ACF98000C301D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B83B48DB1E2ACF98000C301D /* LaunchScreen.storyboard */; };
 		B83B48E81E2AD113000C301D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B83B48E71E2AD113000C301D /* GoogleService-Info.plist */; };
+		B8E95E541E2B34B200A543C2 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E95E531E2B34B200A543C2 /* FeedVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		B83B48DE1E2ACF98000C301D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B83B48E71E2AD113000C301D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B8C100241E2B2E4E00E15C00 /* SocialMedia.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SocialMedia.entitlements; sourceTree = "<group>"; };
+		B8E95E531E2B34B200A543C2 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				B83B48D41E2ACF98000C301D /* SignInVC.swift */,
+				B8E95E531E2B34B200A543C2 /* FeedVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 				B80196351E2AE00E000CE278 /* CustomView.swift in Sources */,
 				B83B48D51E2ACF98000C301D /* SignInVC.swift in Sources */,
 				B801963C1E2AE3C8000CE278 /* CustomTextField.swift in Sources */,
+				B8E95E541E2B34B200A543C2 /* FeedVC.swift in Sources */,
 				B83B48D31E2ACF98000C301D /* AppDelegate.swift in Sources */,
 				B80196381E2AE097000CE278 /* Constants.swift in Sources */,
 				B801963A1E2AE24E000CE278 /* CustomButtonFB.swift in Sources */,

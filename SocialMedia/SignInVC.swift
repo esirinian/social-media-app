@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import Firebase
 import FBSDKCoreKit
 import FBSDKLoginKit
-import Firebase
+import SwiftKeychainWrapper
+
 
 class SignInVC: UIViewController {
     
@@ -21,6 +23,15 @@ class SignInVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if let _ = KeychainWrapper.standard.string(forKey: KEY_UID) {
+            print("ID found in Keychain!")
+            performSegue(withIdentifier: "toFeedVC", sender: nil)
+            
+        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -31,14 +42,7 @@ class SignInVC: UIViewController {
 
     @IBAction func facebookBtnTapped(_ sender: Any) {
         
-        UIView.animate(withDuration: 0.05, animations: {
-            self.fbBtn.transform = CGAffineTransform(scaleX: 0.95, y: 0.95)
-        }, completion: { _ in
-            UIView.animate(withDuration: 0.05) {
-                self.fbBtn.transform = CGAffineTransform.identity
-            }
-        })
-        
+        self.animateBtn(btn: fbBtn)
         
         let fbLoginBtn = FBSDKLoginManager()
         fbLoginBtn.logOut()
@@ -59,34 +63,41 @@ class SignInVC: UIViewController {
     func firebaseAuth(_ crendential: FIRAuthCredential) {
         FIRAuth.auth()?.signIn(with: crendential, completion: { (user, error) in
             if error != nil {
-                print("Unable to authentificate with Firebase using FB")
+                print("Unable to authentificate with Firebase")
             } else {
                 print("Successful authentification with Firebase")
+                if let user = user {
+                    self.autoSignIn(id: user.uid)
+                    
+                }
+                
             }
         })
     }
 
     @IBAction func signInTapped(_ sender: Any) {
         
-        UIView.animate(withDuration: 0.05, animations: {
-            self.signInBtn.transform = CGAffineTransform(scaleX: 0.95, y: 0.95)
-        }, completion: { _ in
-            UIView.animate(withDuration: 0.05) {
-                self.signInBtn.transform = CGAffineTransform.identity
-            }
-        })
-        
+       self.animateBtn(btn: signInBtn)
         
         if let email = emailTextField.text, let password = passwordTextField.text {
             FIRAuth.auth()?.signIn(withEmail: email, password: password, completion: { (user, error) in
                 if error == nil {
                     print("Email Authentificated")
+                    
+                    if let user = user {
+                        self.autoSignIn(id: user.uid)
+                    }
+                    
                 } else {
                     FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (user, error) in
                         if error != nil {
                             print("Unable to authentificate with Firebase using email")
                         } else {
                             print("Successful authentification with Firebase")
+                            
+                            if let user = user {
+                                self.autoSignIn(id: user.uid)
+                            }
                         }
                     })
                 }
@@ -94,7 +105,26 @@ class SignInVC: UIViewController {
         }
     }
     
+    func autoSignIn (id: String) {
+        
+        let keychainResult = KeychainWrapper.standard.set(id, forKey: KEY_UID)
+        performSegue(withIdentifier: "toFeedVC", sender: nil)
+        
+        print("Data saved to keychain \(keychainResult)")
+        
+    }
     
+    func animateBtn(btn: UIButton) {
+        
+        UIView.animate(withDuration: 0.05, animations: {
+            btn.transform = CGAffineTransform(scaleX: 0.95, y: 0.95)
+        }, completion: { _ in
+            UIView.animate(withDuration: 0.05) {
+                btn.transform = CGAffineTransform.identity
+            }
+        })
+        
+    }
     
     
     
