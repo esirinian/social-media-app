@@ -30,6 +30,7 @@
 		B80196391E2AE24E000CE278 /* CustomButtonFB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButtonFB.swift; sourceTree = "<group>"; };
 		B801963B1E2AE3C8000CE278 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		B801963D1E2AE595000CE278 /* CustomButtonSI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButtonSI.swift; sourceTree = "<group>"; };
+		B80EC3071E2B0898004D29A9 /* SocialMedia.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SocialMedia.entitlements; sourceTree = "<group>"; };
 		B83B48CF1E2ACF98000C301D /* SocialMedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialMedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B83B48D21E2ACF98000C301D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B83B48D41E2ACF98000C301D /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
@@ -89,16 +90,17 @@
 		B83B48D11E2ACF98000C301D /* SocialMedia */ = {
 			isa = PBXGroup;
 			children = (
+				B80EC3071E2B0898004D29A9 /* SocialMedia.entitlements */,
 				B80196361E2AE086000CE278 /* Util */,
 				B83B48E41E2AD0D5000C301D /* Model */,
 				B83B48E51E2AD0DE000C301D /* View */,
 				B83B48E61E2AD0E2000C301D /* Controller */,
 				B83B48D21E2ACF98000C301D /* AppDelegate.swift */,
 				B83B48D61E2ACF98000C301D /* Main.storyboard */,
-				B83B48D91E2ACF98000C301D /* Assets.xcassets */,
 				B83B48DB1E2ACF98000C301D /* LaunchScreen.storyboard */,
 				B83B48DE1E2ACF98000C301D /* Info.plist */,
 				B83B48E71E2AD113000C301D /* GoogleService-Info.plist */,
+				B83B48D91E2ACF98000C301D /* Assets.xcassets */,
 			);
 			path = SocialMedia;
 			sourceTree = "<group>";
@@ -175,6 +177,11 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 54S7LMH8GM;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -393,6 +400,7 @@
 			baseConfigurationReference = 0AEFD95E121F340E28480EE4 /* Pods-SocialMedia.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SocialMedia/SocialMedia.entitlements;
 				DEVELOPMENT_TEAM = 54S7LMH8GM;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -411,6 +419,7 @@
 			baseConfigurationReference = 205B43C134BEC6D1E3FFD32B /* Pods-SocialMedia.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SocialMedia/SocialMedia.entitlements;
 				DEVELOPMENT_TEAM = 54S7LMH8GM;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
