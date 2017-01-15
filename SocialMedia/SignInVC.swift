@@ -25,15 +25,16 @@ class SignInVC: UIViewController {
 
     @IBAction func facebookBtnTapped(_ sender: Any) {
         let fbLoginBtn = FBSDKLoginManager()
+        fbLoginBtn.logOut()
         
         fbLoginBtn.logIn(withReadPermissions: ["email"], from: self) { (result, error) in
             if error != nil {
-                print("Unable to authenticate with FACEBOOK!")
+                print("Unable to authenticate with FACEBOOK! - \(error!)")
             } else if result?.isCancelled == true {
                 print("User cancelled FB Authenification")
             } else {
                 print ("FB Authenificated")
-                let credential = FIRGitHubAuthProvider.credential(withToken: FBSDKAccessToken.current().tokenString)
+                let credential = FIRFacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
                 self.firebaseAuth(credential)
             }
         }
