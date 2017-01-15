@@ -39,5 +39,14 @@ class CustomTextField: UITextField {
         //Keeps same shape as when there is no editing
         return bounds.insetBy(dx: 10, dy: 0)
     }
+    
+    func textFieldShouldReturn(_ textField: CustomTextField) -> Bool
+    {
+        // Try to find next responder
+        if let nextField = textField.superview?.viewWithTag(1) as? CustomTextField {
+            nextField.becomeFirstResponder()
+        }
+        return false
+    }
 
 }

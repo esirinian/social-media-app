@@ -38,6 +38,7 @@
 		B83B48DC1E2ACF98000C301D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B83B48DE1E2ACF98000C301D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B83B48E71E2AD113000C301D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B8C100241E2B2E4E00E15C00 /* SocialMedia.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SocialMedia.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +90,7 @@
 		B83B48D11E2ACF98000C301D /* SocialMedia */ = {
 			isa = PBXGroup;
 			children = (
+				B8C100241E2B2E4E00E15C00 /* SocialMedia.entitlements */,
 				B80196361E2AE086000CE278 /* Util */,
 				B83B48E41E2AD0D5000C301D /* Model */,
 				B83B48E51E2AD0DE000C301D /* View */,
@@ -177,7 +179,7 @@
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Keychain = {
-								enabled = 0;
+								enabled = 1;
 							};
 						};
 					};
@@ -398,6 +400,7 @@
 			baseConfigurationReference = 0AEFD95E121F340E28480EE4 /* Pods-SocialMedia.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SocialMedia/SocialMedia.entitlements;
 				DEVELOPMENT_TEAM = 54S7LMH8GM;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -416,6 +419,7 @@
 			baseConfigurationReference = 205B43C134BEC6D1E3FFD32B /* Pods-SocialMedia.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SocialMedia/SocialMedia.entitlements;
 				DEVELOPMENT_TEAM = 54S7LMH8GM;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
