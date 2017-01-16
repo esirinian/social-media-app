@@ -20,6 +20,7 @@
 		B83B48DD1E2ACF98000C301D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B83B48DB1E2ACF98000C301D /* LaunchScreen.storyboard */; };
 		B83B48E81E2AD113000C301D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B83B48E71E2AD113000C301D /* GoogleService-Info.plist */; };
 		B8446F401E2BD1090084193D /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8446F3F1E2BD1090084193D /* CustomCell.swift */; };
+		B8446F431E2BE97E0084193D /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8446F421E2BE97E0084193D /* DataService.swift */; };
 		B8E95E541E2B34B200A543C2 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E95E531E2B34B200A543C2 /* FeedVC.swift */; };
 		B8E95E561E2B412900A543C2 /* CircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E95E551E2B412900A543C2 /* CircleImageView.swift */; };
 /* End PBXBuildFile section */
@@ -42,6 +43,7 @@
 		B83B48DE1E2ACF98000C301D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B83B48E71E2AD113000C301D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B8446F3F1E2BD1090084193D /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		B8446F421E2BE97E0084193D /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		B8C100241E2B2E4E00E15C00 /* SocialMedia.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SocialMedia.entitlements; sourceTree = "<group>"; };
 		B8E95E531E2B34B200A543C2 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		B8E95E551E2B412900A543C2 /* CircleImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleImageView.swift; sourceTree = "<group>"; };
@@ -96,17 +98,18 @@
 		B83B48D11E2ACF98000C301D /* SocialMedia */ = {
 			isa = PBXGroup;
 			children = (
-				B8C100241E2B2E4E00E15C00 /* SocialMedia.entitlements */,
-				B80196361E2AE086000CE278 /* Util */,
 				B83B48E41E2AD0D5000C301D /* Model */,
 				B83B48E51E2AD0DE000C301D /* View */,
 				B83B48E61E2AD0E2000C301D /* Controller */,
-				B83B48D21E2ACF98000C301D /* AppDelegate.swift */,
+				B8446F411E2BE9640084193D /* Services */,
+				B80196361E2AE086000CE278 /* Util */,
 				B83B48D61E2ACF98000C301D /* Main.storyboard */,
+				B83B48D91E2ACF98000C301D /* Assets.xcassets */,
+				B83B48D21E2ACF98000C301D /* AppDelegate.swift */,
 				B83B48DB1E2ACF98000C301D /* LaunchScreen.storyboard */,
 				B83B48DE1E2ACF98000C301D /* Info.plist */,
 				B83B48E71E2AD113000C301D /* GoogleService-Info.plist */,
-				B83B48D91E2ACF98000C301D /* Assets.xcassets */,
+				B8C100241E2B2E4E00E15C00 /* SocialMedia.entitlements */,
 			);
 			path = SocialMedia;
 			sourceTree = "<group>";
@@ -138,6 +141,14 @@
 				B8E95E531E2B34B200A543C2 /* FeedVC.swift */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		B8446F411E2BE9640084193D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B8446F421E2BE97E0084193D /* DataService.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 		FD457392AA62F0F4B07D3D87 /* Pods */ = {
@@ -284,6 +295,7 @@
 				B8446F401E2BD1090084193D /* CustomCell.swift in Sources */,
 				B80196351E2AE00E000CE278 /* CustomView.swift in Sources */,
 				B83B48D51E2ACF98000C301D /* SignInVC.swift in Sources */,
+				B8446F431E2BE97E0084193D /* DataService.swift in Sources */,
 				B801963C1E2AE3C8000CE278 /* CustomTextField.swift in Sources */,
 				B8E95E541E2B34B200A543C2 /* FeedVC.swift in Sources */,
 				B83B48D31E2ACF98000C301D /* AppDelegate.swift in Sources */,

@@ -67,8 +67,8 @@ class SignInVC: UIViewController {
             } else {
                 print("Successful authentification with Firebase")
                 if let user = user {
-                    self.autoSignIn(id: user.uid)
-                    
+                    let userData = ["provider": crendential.provider]
+                    self.autoSignIn(id: user.uid, userData: userData)
                 }
                 
             }
@@ -85,7 +85,8 @@ class SignInVC: UIViewController {
                     print("Email Authentificated")
                     
                     if let user = user {
-                        self.autoSignIn(id: user.uid)
+                        let userData = ["provider": user.providerID]
+                        self.autoSignIn(id: user.uid, userData: userData)
                     }
                     
                 } else {
@@ -96,7 +97,8 @@ class SignInVC: UIViewController {
                             print("Successful authentification with Firebase")
                             
                             if let user = user {
-                                self.autoSignIn(id: user.uid)
+                                let userData = ["provider": user.providerID]
+                                self.autoSignIn(id: user.uid, userData: userData)
                             }
                         }
                     })
@@ -105,7 +107,9 @@ class SignInVC: UIViewController {
         }
     }
     
-    func autoSignIn (id: String) {
+    func autoSignIn (id: String, userData: Dictionary<String, String>) {
+        
+        DataService.ds.createFirebaseDBUser(uid: id, userData: userData)
         
         let keychainResult = KeychainWrapper.standard.set(id, forKey: KEY_UID)
         performSegue(withIdentifier: "toFeedVC", sender: nil)
