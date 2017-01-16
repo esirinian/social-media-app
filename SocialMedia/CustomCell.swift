@@ -16,9 +16,17 @@ class CustomCell: UITableViewCell {
     @IBOutlet weak var captionField: UITextView!
     @IBOutlet weak var likesLbl: UILabel!
 
+    
+    var post: Post!
 
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+    }
+    
+    func configureCell(post: Post) {
+        self.post = post
+        self.captionField.text = post.caption
+        self.likesLbl.text = "\(post.likes)"
     }
 }
