@@ -95,16 +95,16 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
                     
                     //Access the url from the metadata in a raw String format
                     let downloadUrl = metadata?.downloadURL()?.absoluteString
-                    
-                    
+                    if let url = downloadUrl {
+                        self.postToFirebase(imageUrl: url)
+                    }
                 }
             }
-            
         }
-        
     }
     
     
+    //Table View Funcs
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -134,6 +134,8 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         }
     }
     
+    
+    //Personal Funcs
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
             addImage.image = image
@@ -143,5 +145,29 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         }
         imagePicker.dismiss(animated: true, completion: nil)
     }
+    
+    func postToFirebase (imageUrl: String) {
+        //Object to be posted
+        let post: Dictionary<String, Any> = [
+            "caption": captionField.text!,
+            "imageUrl": imageUrl,
+            "likes": 0
+        ]
+        
+        let firebasePost = DataService.ds.REF_POSTS.childByAutoId()
+        firebasePost.setValue(post)
+        
+        
+        //Resetting the fields to blank
+        captionField.text = ""
+        imageSelected = false
+        addImage.image = UIImage(named: "add-image")
+        view.endEditing(true)
+        
+        tableView.reloadData()
+    }
 
 }
+
+
+

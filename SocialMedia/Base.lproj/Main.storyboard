@@ -65,7 +65,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M1v-wZ-uyM" customClass="CustomButtonFB" customModule="SocialMedia" customModuleProvider="target">
-                                <rect key="frame" x="112" y="230" width="150" height="150"/>
+                                <rect key="frame" x="112.5" y="230" width="150" height="150"/>
                                 <color key="backgroundColor" red="0.23137254901960785" green="0.34901960784313724" blue="0.59607843137254901" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="B90-Z8-X1F"/>
@@ -250,7 +250,7 @@
                                                     <rect key="frame" x="16" y="8" width="343" height="359"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="BiY-9u-8eO">
-                                                            <rect key="frame" x="8" y="8" width="327" height="307"/>
+                                                            <rect key="frame" x="8" y="8" width="327" height="314.5"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="wz6-aX-cUF">
                                                                     <rect key="frame" x="0.0" y="0.0" width="327" height="60"/>
@@ -274,15 +274,15 @@
                                                                     </subviews>
                                                                 </stackView>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screen Shot 2016-05-11 at 8.05.53 PM" translatesAutoresizingMaskIntoConstraints="NO" id="0Zn-eV-a1n">
-                                                                    <rect key="frame" x="0.0" y="68" width="327" height="161"/>
+                                                                    <rect key="frame" x="0.0" y="68" width="327" height="188.5"/>
                                                                 </imageView>
                                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="GZa-mG-WTA">
-                                                                    <rect key="frame" x="0.0" y="237" width="327" height="70"/>
+                                                                    <rect key="frame" x="0.0" y="264.5" width="327" height="50"/>
                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="PJr-e8-jA0"/>
+                                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="35" id="PJr-e8-jA0"/>
                                                                     </constraints>
-                                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                                    <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                                 </textView>
@@ -311,7 +311,7 @@
                                                         <constraint firstAttribute="trailing" secondItem="3Eb-P2-7JC" secondAttribute="trailing" constant="8" id="62E-gG-YqH"/>
                                                         <constraint firstItem="BiY-9u-8eO" firstAttribute="leading" secondItem="1xt-rj-q9N" secondAttribute="leading" constant="8" id="id3-Cv-sDN"/>
                                                         <constraint firstItem="BiY-9u-8eO" firstAttribute="top" secondItem="1xt-rj-q9N" secondAttribute="top" constant="8" id="lmB-0j-03F"/>
-                                                        <constraint firstItem="3Eb-P2-7JC" firstAttribute="top" secondItem="BiY-9u-8eO" secondAttribute="bottom" constant="16" id="nye-ap-7B9"/>
+                                                        <constraint firstItem="3Eb-P2-7JC" firstAttribute="top" secondItem="BiY-9u-8eO" secondAttribute="bottom" constant="8" id="nye-ap-7B9"/>
                                                         <constraint firstAttribute="bottom" secondItem="3Eb-P2-7JC" secondAttribute="bottom" constant="8" id="pwy-uc-wIw"/>
                                                         <constraint firstAttribute="trailing" secondItem="BiY-9u-8eO" secondAttribute="trailing" constant="8" id="zpA-8x-c4A"/>
                                                     </constraints>
