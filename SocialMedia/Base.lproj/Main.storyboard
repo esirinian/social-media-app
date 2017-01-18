@@ -211,13 +211,17 @@
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-post" translatesAutoresizingMaskIntoConstraints="NO" id="fOs-6C-fjc" customClass="CircleImageView" customModule="SocialMedia" customModuleProvider="target">
+                                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-post" translatesAutoresizingMaskIntoConstraints="NO" id="fOs-6C-fjc" customClass="CircleImageView" customModule="SocialMedia" customModuleProvider="target">
                                                 <rect key="frame" x="284" y="2" width="45" height="45"/>
                                                 <color key="backgroundColor" red="0.97647058819999999" green="0.6588235294" blue="0.1450980392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <gestureRecognizers/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="45" id="IPT-sc-X9e"/>
                                                     <constraint firstAttribute="height" constant="45" id="dqd-C8-rOH"/>
                                                 </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="Eca-SY-3xk" appends="YES" id="NcR-gf-y06"/>
+                                                </connections>
                                             </imageView>
                                         </subviews>
                                     </stackView>
@@ -353,6 +357,7 @@
                     </view>
                     <connections>
                         <outlet property="addImage" destination="65p-ga-DcU" id="InH-SA-9ia"/>
+                        <outlet property="captionField" destination="i0V-cX-wdi" id="ZkG-4a-zZr"/>
                         <outlet property="tableView" destination="nON-UE-FBY" id="lgd-mx-mfh"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="toSignInVC" id="qN2-AZ-RMf"/>
                     </connections>
@@ -366,6 +371,11 @@
                 <tapGestureRecognizer id="Gpl-1S-gfC">
                     <connections>
                         <action selector="addImageTapped:" destination="9Ex-kM-OYa" id="r2w-4I-zdN"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Eca-SY-3xk">
+                    <connections>
+                        <action selector="postBtnTapped:" destination="9Ex-kM-OYa" id="5Kq-fh-kHL"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
