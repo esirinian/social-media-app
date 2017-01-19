@@ -50,7 +50,7 @@ class CustomCell: UITableViewCell {
             let ref = FIRStorage.storage().reference(forURL: post.imageURL)
             ref.data(withMaxSize: 2 * 1024 * 1024, completion: { (data, error) in
                 if error != nil {
-                    print ("unable to download image from FB Storage")
+                    print ("Unable to download image from FB Storage")
                 } else {
                     print("Image downloaded from Firebase storage")
                     

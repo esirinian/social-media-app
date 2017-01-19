@@ -41,7 +41,6 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
             
             if let snapshot = snapshot.children.allObjects as? [FIRDataSnapshot] {
                 for snap in snapshot {
-                    print(snap)
                     if let postDict = snap.value as? Dictionary<String, AnyObject> {
                         let key = snap.key
                         let post = Post(postKey: key, postData: postDict)
@@ -49,6 +48,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
                     }
                 }
             }
+            self.posts.reverse()
             self.tableView.reloadData()
         })
          
